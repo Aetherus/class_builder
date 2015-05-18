@@ -1,0 +1,5 @@
+Class: Car
+Attributes: model, String
+Attributes: price, Fixnum
+Constraint: model, model != nil
+Constraint: price, price > 0
