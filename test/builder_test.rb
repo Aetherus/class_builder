@@ -3,13 +3,14 @@ require 'class_builder'
 
 class BuilderTest < Test::Unit::TestCase
 
+  spec_file = File.expand_path('../car_spec.txt', __FILE__)
+  builder = ClassBuilder::Builder.new(spec_file)
+  builder.build
+
   # Called before every test method runs. Can be used
   # to set up fixture information.
   def setup
-    spec_file = File.expand_path('../car_spec.txt', __FILE__)
-    builder = ClassBuilder::Builder.new(spec_file)
-    builder.build
-    @car = ::Car.new
+    @car = Car.new
   end
 
   # Called after every test method runs. Can be used to tear
