@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'class_builder'
+gem 'class_builder', git: 'git://github.com/aetherus/class_builder.git'
 ```
 
 And then execute:
@@ -22,7 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+ClassBuilder.new(class_specification_file_path).build
+```
 
 ## Development
 
