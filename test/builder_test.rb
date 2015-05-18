@@ -42,4 +42,14 @@ class BuilderTest < Test::Unit::TestCase
       @car.price = '3000'
     end
   end
+
+  def test_setting_values_against_constraints
+    assert_raise do
+      @car.model = nil
+    end
+
+    assert_raise do
+      @car.price = -1
+    end
+  end
 end
